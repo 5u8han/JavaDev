@@ -17,7 +17,8 @@ public class GameOfLife {
 		this.grid = resultantGrid;
 	}
 	
-
+		//fuck this shit
+	
 	public void main(String[] args) {
 		// TODO Auto-generated method stub
 	}
@@ -99,6 +100,7 @@ public class GameOfLife {
 		for (int i = 0; i < 3; i++) {
 			getGrid()[row][col - 1 + i] = 1;
 		}
+		System.out.println("shit");
 	}
 	
 	public void blockPatternInitialGrid() {
