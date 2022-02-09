@@ -1,0 +1,78 @@
+/Users/sub/Library/Java/JavaVirtualMachines/openjdk-15.0.2/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=52562:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/sub/IdeaProjects/Recursive Methods/out/production/Recursive Methods:/Applications/IntelliJ IDEA CE.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-stdlib.jar:/Applications/IntelliJ IDEA CE.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-reflect.jar:/Applications/IntelliJ IDEA CE.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-test.jar TestRecursiveMethods
+Test 1: computePI(1) ==> [Passed]
+ Expected: 1
+ Yours: 1.0
+
+Test 2: computePI(4) ==> [Passed]
+ Expected: 0.7238
+ Yours: 0.7238
+
+Test 3: computePI(7) ==> [Passed]
+ Expected: 0.8209
+ Yours: 0.8209
+
+Test 4: computePI(1000) ==> [Passed]
+ Expected: 0.7851
+ Yours: 0.7851
+
+Test 5: upperStackRec("a" (from top to bottom)) ==> [Passed]
+ Expected: "A" (from top to bottom)
+ Yours: "A" (from top to bottom)
+
+Test 6: upperStackRec("p?7" (from top to bottom)) ==> [Passed]
+ Expected: "P?7" (from top to bottom)
+ Yours: "P?7" (from top to bottom)
+
+Test 7: upperStackRec("cs3K4" (from top to bottom)) ==> [Passed]
+ Expected: "CS3K4" (from top to bottom)
+ Yours: "CS3K4" (from top to bottom)
+
+Test 8: upperStackRec("AbCdE|XyZ" (from top to bottom)) ==> [Passed]
+ Expected: "ABCDE|XYZ" (from top to bottom)
+ Yours: "ABCDE|XYZ" (from top to bottom)
+
+Test 9: reverseStringRec("") ==> [Passed]
+ Expected: ""
+ Yours: ""
+
+Test 10: reverseStringRec("a") ==> [Passed]
+ Expected: "a"
+ Yours: "a"
+
+Test 11: reverseStringRec("abc") ==> [Passed]
+ Expected: "cba"
+ Yours: "cba"
+
+Test 12: reverseStringRec("Hello, Data Structures!") ==> [Passed]
+ Expected: "!serutcurtS ataD ,olleH"
+ Yours: "!serutcurtS ataD ,olleH"
+
+Test 13: numOccurrencesRec(null, 0, 10) ==> [Passed]
+ Expected: 0
+ Yours: 0
+
+Test 14: numOccurrencesRec([20], 0, 10) ==> [Passed]
+ Expected: 0
+ Yours: 0
+
+Test 15: numOccurrencesRec([20], 0, 20) ==> [Passed]
+ Expected: 1
+ Yours: 1
+
+Test 16: numOccurrencesRec([45->25->73->45->19->57->45], 0, 45) ==> [Failed]
+ Expected: 3
+ Yours: 1
+
+Test 17: numOccurrencesRec([45->25->73->25->19->25->43->25], 1, 25) ==> [Failed]
+ Expected: 4
+ Yours: 1
+
+Test 18: numOccurrencesRec([45->25->73->25->19->25->19->45], 4, 19) ==> [Failed]
+ Expected: 2
+ Yours: 1
+
+Total test cases: 18
+Correct: 15
+Wrong: 3
+
+Process finished with exit code 0

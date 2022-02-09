@@ -1,0 +1,244 @@
+public class Queen {
+	
+	boolean[][] board = new boolean[8][8];
+	int[][] queens = new int[8][2];
+	boolean[] queensCondition = new boolean[8];
+	int[] horizontal = new int[4];
+	int[] vertical = new int[4];
+	
+	public Queen() {
+		for (int row = 0; row < board.length; row++) {
+			for (int column = 0; column < board[row].length; column++) {
+				board[row][column] = false; 
+			}
+		}
+		
+		for (int queen = 0; queen < queensCondition.length; queen++) {
+			queensCondition[queen] = false;
+		}
+		
+		for (int queen = 0; queen < queens.length; queen++) {
+			queens[queen][1] = queen;
+		}
+		
+		// up right
+		horizontal[0] = -1;
+		vertical[0] = 1; 
+		// down left
+		horizontal[1] = 1;
+		vertical[1] = -1;
+		// up left
+		horizontal[2] = -1;
+		vertical[2] = -1;
+		// down right
+		horizontal[3] = 1;
+		vertical[3] = 1;
+
+		placeQueens();
+		displayBoard();
+		
+	}
+	
+	public void placeQueens () {
+		int counter = 0;
+		for (int i = 0; i < board.length; i++) {
+			if (checkSquare(i, 0) == false && queensCondition[0] == false) {
+				queens[0][0] = i;
+				queensCondition[0] = true;
+				board[i][0] = true;
+				System.out.printf("queen 1 has been placed in [%d][0]\n", i);
+				
+			}			
+			else if (queensCondition[0] == true) {
+				for (int j = 0; j < board.length; j++) {
+					if (checkSquare(j, 1) == false && queensCondition[1] == false) {
+						queens[j][1] = j;
+						queensCondition[1] = true;
+						board[j][1] = true;
+						System.out.printf("queen 2 has been placed in [%d][1]\n", j);
+
+					}
+					else if (queensCondition[1] == true) {
+						for (int k = 0; k < board.length; k++) {
+							if (checkSquare(k, 2) == false && queensCondition[2] == false) {
+								queens[k][1] = k;
+								queensCondition[2] = true;
+								board[k][2] = true;
+								System.out.printf("queen 3 has been placed in [%d][2]\n", k);
+								
+							}
+							else if (queensCondition[2] == true) {
+								for (int l = 0; l < board.length; l++) {
+									if (checkSquare(l, 3) == false && queensCondition[3] == false) {
+										queens[l][1] = l;
+										queensCondition[3] = true;
+										board[l][3] = true;
+										System.out.printf("queen 4 has been placed in [%d][3]\n", l);
+										
+									}
+									else if (queensCondition[3] == true) {
+										for (int m = 0; m < board.length; m++) {
+											if (checkSquare(m, 4) == false && queensCondition[4] == false) {
+												queens[m][1] = m;
+												queensCondition[4] = true;
+												board[m][4] = true;
+												System.out.printf("queen 5 has been placed in [%d][4]\n", m);
+												
+											}
+											else if (queensCondition[4] == true) {
+												for (int n = 0; n < board.length; n++) {
+													if (checkSquare(n, 5) == false && queensCondition[5] == false) {
+														queens[n][1] = n;
+														queensCondition[5] = true;
+														board[n][5] = true;
+														System.out.printf("queen 6 has been placed in [%d][5]\n", n);
+														
+													}
+													else if (queensCondition[5] == true) {
+														for (int o = 0; o < board.length; o++) {
+															if (checkSquare(o, 6) == false && queensCondition[6] == false) {
+																queens[o][1] = o;
+																queensCondition[6] = true;
+																board[o][6] = true;
+																System.out.printf("queen 6 has been placed in [%d][6]\n", o);
+																
+															}
+															else if (queensCondition[6] == true) {
+																for (int p = 0; p < board.length; p++) {
+																	if (checkSquare(p, 7) == false && queensCondition[7] == false) {
+																		queens[p][1] = p;
+																		queensCondition[7] = true;
+																		board[p][7] = true;
+																		System.out.printf("queen 7 has been placed in [%d][7]\n", p);
+																		
+																	}
+																	
+																}// queen 8
+																if (queensCondition[7] == false) {
+																	queensCondition[6] = false;
+																	board[queens[6][0]][6] = false;
+																}
+															}
+															
+														}// queen 7
+														if (queensCondition[6] == false) {
+															queensCondition[5] = false;
+															board[queens[5][0]][5] = false;
+														}
+													}
+													
+												}// queen 6
+												if (queensCondition[5] == false) {
+													queensCondition[4] = false;
+													board[queens[4][0]][4] = false;
+												}
+											}
+											
+										}// queen 5
+										if (queensCondition[4] == false) {
+											queensCondition[3] = false;
+											board[queens[3][0]][3] = false;
+										}
+									}
+									
+								}// queen 4
+								if (queensCondition[3] == false) {
+									queensCondition[2] = false;
+									board[queens[2][0]][2] = false;
+								}
+							}
+							
+						}// queen 3
+						if (queensCondition[2] == false) {
+							queensCondition[1] = false;
+							board[queens[1][0]][1] = false;
+						}
+					}
+					
+				}// queen 2
+				
+				if (queensCondition[1] == false) {
+					queensCondition[0] = false;
+					board[queens[0][0]][0] = false;
+				}
+				
+			}
+			
+			
+		}// queen 1
+		
+	}
+	
+
+	public boolean checkSquare(int row, int col) {
+
+//		System.out.printf("checking square[%d][%d]...\n", row, col);
+		boolean condition = false;
+		// check row
+		for (int column = 0; column < board[row].length; column++) {
+			if ((board[row][column] == true)) {
+				condition = true;
+			}
+		}
+		// check column
+		for (int row_ = 0; row_ < board.length; row_++) {
+			if (board[row_][col] == true) {
+						condition = true;
+			}
+		}
+		
+		// check diagonal
+		for (int row_ = row, col_ = col; row_ >= 0 && col_ < 8; row_ += horizontal[0], col_ += vertical[0]) {
+			if (board[row_][col_] == true) {
+				condition = true;
+			}
+		}
+		for (int row_ = row, col_ = col; row_ < 8 && col_ >= 0; row_ += horizontal[1], col_ += vertical[1]) {
+			if (board[row_][col_] == true) {
+				condition = true;
+			}
+		}
+		for (int row_ = row, col_ = col; row_ >= 0 && col_ >= 0; row_ += horizontal[2], col_ += vertical[2]) {
+			if (board[row_][col_] == true) {
+				condition = true;
+			}
+		}
+		for (int row_ = row, col_ = col; row_ < 8 && col_ < 8; row_ += horizontal[3], col_ += vertical[3]) {
+			if (board[row_][col_] == true) {
+				condition = true;
+			}
+		}
+
+		if (condition == true) {
+//			System.out.printf("square[%d][%d] is attaked.\n", row,col);
+		}
+		else {
+			System.out.printf("square[%d][%d] is NOT attaked.\n", row,col);
+
+		}
+		
+		return condition;
+	}
+	
+	public void displayBoard () {
+		int counter = 0;
+		for (int row = 0; row < board.length; row++) {
+			for (int col = 0; col < board[row].length; col++) {
+				if (board[row][col] == true) {
+					System.out.printf("|%s|", "x");
+					counter++;
+				}
+				else {				
+					System.out.printf("|%s|", "o");
+				}
+			}
+			System.out.println();
+
+		}
+		
+		System.out.printf("%d queens has been placed\n", counter);
+
+		
+	}
+	
+}

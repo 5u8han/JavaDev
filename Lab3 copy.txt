@@ -1,0 +1,64 @@
+/**
+ * Subhan Noeman
+ * CIS 144 BD SPRING 2018 CH 2 JAVA PROGRAMMING CODE
+ * DATE: 01/23/2018 Lab Assignment
+ * Exercise 2.15 Code : Calculate.java
+ * Prints the sum, product, difference and quotient of two numbers.
+ */
+import java.util.* ;
+
+public class Calculate {
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		int number1;
+		int number2;
+		System.out.println("Enter First number: ");
+		number1 = input.nextInt();
+		System.out.println("Enter Second number: ");
+		number2 = input.nextInt();
+		System.out.printf("Sum is %d%n", (number1 + number2));
+		System.out.printf("Differnce is %d%n", (number1 - number2));
+		System.out.printf("Product is %d%n", (number1 * number2));
+		System.out.printf("Quotient is %d%n", (number1 / number2));
+		System.out.printf("Remainder is %d%n", (number1 % number2));
+	}
+}
+
+
+
+
+'
+
+
+
+/**
+ * Subhan Noeman
+ * CIS 144 BD SPRING 2018 CH 2 JAVA PROGRAMqMING CODE
+ * DATE: 01/23/2018 Lab Assignment
+ * Exercise 2.15 Code : Calculate.java
+ * Prints the sum, product, difference and quotient of two numbers.
+ */
+import java.util.* ;
+
+public class Calculator {
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		int number1;
+		int number2;
+		int number3;
+		System.out.println("Enter First number: ");
+		number1 = input.nextInt();
+		System.out.println("Enter Second number: ");
+		number2 = input.nextInt();
+		System.out.println("Enter third number: ");
+		number3 = input.nextInt();
+		System.out.println("The mathematical format is occouring as first number, logical operator, then the second number & vice versa. ");
+		System.out.printf("Sum of the three numbers is %d%n", (number1 + number2 + number3));
+		System.out.printf("Differnce of the three numbers %d%n", (number1 - number2 - number3));
+		System.out.printf("Product of the three numbers %d%n", (number1 * number2 * number3));
+		System.out.printf("Quotient of the three numbers %d%n", (number1 / number2 / number3));
+		System.out.printf("Remainder of the three numbers %d%n", (number1 % number2 % number3));
+	}
+}

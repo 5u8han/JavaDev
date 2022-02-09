@@ -1,0 +1,14 @@
+/*
+ * Rules sets may be created using 3 types of selectors:
+ *	1. type = element type (body, div, span, h1, etc.)
+ *	2. id = id attribute --> starts with # (#divOne)
+ *	3. class = class attribute --> starts with . (.allDivs)
+ */
+
+/* Type Selector */
+
+
+/* ID Selector */
+
+
+/* Class Selector */

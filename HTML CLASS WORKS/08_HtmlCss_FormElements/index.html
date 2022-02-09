@@ -1,0 +1,191 @@
+<html>
+	<head>
+		<title>HTML &amp; CSS - Form Elements</title>
+		<!-- Title limited to ~65 characters-->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="stylesheet" href="css/styles.css">
+
+		<meta name="description" content="This is in class work">
+
+		<meta name="keywords" content="html, css, web development, neiu">
+	</head>
+	<body>
+		<header>
+
+
+			<section class="left">
+				<div class="big">
+					NEIU
+				</div>
+				<div class="small">
+					CS300
+				</div>
+			</section>
+			<section class="right">
+				<div class="big">
+					HTML &amp; CSS
+				</div>
+				<div class="small">
+					Form Elements
+				</div>
+			</section>
+		</header>
+
+<!---inputs, labels, forms and buttons-->
+
+		<div id="container">
+
+			<article>
+				<h1>Create an Account</h1>
+				<p>You need to enter your personal information in the form</p>
+				<section>
+					<form action="index.html" method="POST"> <!-- action tells what heppens when the user submits the form-->
+						<div class="row">
+							<label>Hidden</label>
+							<!--input hidden-->
+							<input type="hidden" name="hiddeninput" value="secret Value">
+						</div>
+						<div class="row">
+							<label>Text</label> 
+							<!--input text-->
+							<input type="text" class="txt" id="TxtInput" name="TxtInput" placeholder="Enter Text Here">
+							<!-- placeholder is text that disappears when you start typing in form-->
+						</div>
+						<div>
+							<div class="row">
+								<label>Text 2</label>
+								<input type="text"class="txt" id="TxtInput" name="Email" value="I am not Changable" disabled>
+							</div>
+						</div>
+						<div class="row">
+							<label for="TxtInput">Email</label>
+							<!--input email-->
+							<input type="email"class="txt" id="emailInput" name="Email" placeholder="Enter Email Here">
+						</div>
+						<div class="row">
+							<label for="passwordInput">Password</label>
+							<!--input password-->
+							<input type="password" class="txt" id="passwordInput" name="Password" placeholder="Enter Password Here" maxlength="18" minlength="8" required>
+						</div>
+						<div class="row">
+							<label>Range</label>
+							<!--input range-->
+							<input type="range"class="txt" id="" name="RangeInput" step="0.001" >
+						</div>
+						<div class="row">
+							<label>File Upload</label>
+							<!--input file-->
+							<input type="file" name="fileinput" class="btn" id="fileinput">
+						</div>
+						<div class="row">
+							<label>Number</label>
+							<!--input number-->
+							<input type="Number"class="txt" id="NumberInput" name="Number" placeholder="Enter Number Here" min="">
+						</div>
+						<div class="row">
+							<label>File</label>
+							<!--input file-->
+						</div>
+						<div class="row">
+							<label>Text Area</label>
+							<!--textarea-->
+							<textArea id="textarea" name="textarea" rows="3" cols="20"></textArea>
+						</div>
+						<DIV>
+							<div class="row">
+								<label>Text Area 2</label>
+								<textArea id="textarea" name="textarea" rows="3" cols="20"></textArea>
+							</div>
+						</DIV>
+						<div class="row">
+							<label for="Dropdown">Select (Dropdown)</label>
+							<!--select list-->
+							<select id="Dropdown" name="Dropdown" class="text">
+							<option disabled>--Select One</option>
+							<option value="1">one</option>
+							<option value="2">two</option>
+							<option value="3">three</option>
+							<option value="4">four</option>
+							<option value="5">five</option>
+							<option value="6">6ix9ine</option>
+							</select>
+						</div>
+						<div class="row">
+							<label>Select (List Box)</label>
+							<!--option box-->
+							<select id="listbox" name="listbox" class="listbox" multiple="6">
+								
+
+
+							<option disabled>--Select One</option>
+							<option value="1">one</option>
+							<option value="2">two</option>
+							<option value="3">three</option>
+							<option value="4">four</option>
+							<option value="5">five</option>
+							<option value="6">6ix9ine</option>
+
+
+							</select>
+						</div>
+						<div class="row">
+							<label>Checkbox</label>
+							<!--input checkbox-->
+							<div>
+								<label for="chk1" class="chklabel">One</label>
+
+								<label>Two</label>
+
+								<label>Three</label>
+
+							</div>
+						</div>
+						<div class="row">
+							<label>Radio</label>
+							<!--input radio-->
+
+
+							<div>
+								<label for="radio1" class="chklabel">One</label>
+								<label for="radio2" class="chklabel">Two</label>
+								<label for="radio3" class="chklabel">Three</label>
+							</div>
+						</div>
+						<div class="row">
+							<!--input buttons (reset, submit, button, image)-->
+							<div>
+								<input type="submit" class ="btn" value="submit"/>
+							</div>
+							<div>
+								<input type="button" class ="btn" value="button"/>
+							</div>
+								<input type="submit" class ="btn" value="button"/>
+							</div>
+								<input type="submit" class ="btn" value="button"/>
+							</div>
+
+						</div>
+						<div class="row">
+							<!--button (with text, image, and both)-->
+							<button>
+									Text &amp; Image 
+							</button>
+						</div>
+					</section>
+				</form>
+
+
+
+			</article>
+		</div>
+		<div class="clear"></div>
+		<footer>
+			<section class="left ftrLeft">
+				Northeastern Illinois University - CS300
+			</section>
+			<section class="right ftrRight">
+				&copy; Copyright 2018
+			</section>
+		</footer>
+	</body>
+</html>

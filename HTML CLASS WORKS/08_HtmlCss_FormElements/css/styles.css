@@ -1,0 +1,232 @@
+body{
+	float: left;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: calibri, arial, sans-serif;
+}
+
+header{
+	float: left;
+	width: 96%;
+	height: 75px;
+	padding: 20px 2%;
+	border-bottom: 2px solid black;
+	background: #f7f7f7;
+	z-index: 5;
+	color: #2c3e50;
+}
+
+header .left{
+	font-size: 36px;
+}
+
+header .right{
+	font-size: 18px;
+}
+
+header .small{
+	color: #f1c40f;
+}
+
+.left{
+	float: left;
+	width: 40%;
+}
+
+.right{
+	float: right;
+	width: 40%;
+	text-align: right;
+}
+
+.big{
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.small{
+	font-weight: 400;
+	text-transform: lowercase;
+}
+
+#container{
+	float: left;
+	width: 100%;
+}
+
+article{
+	float: left;
+	width: 80%;
+	padding: 2% 10% 0 10%;
+	min-width: 490px;
+	height: auto;
+}
+
+h2{
+	float: left;
+	clear: both;
+	width: 50%;
+}
+
+div{
+	float: left;
+	clear: both;
+	width: 100%;
+	
+}
+
+.clear{
+	float: left;
+	width: 100%;
+	clear: both;
+}
+
+footer{
+	float: left;
+	width: 100%;
+	padding: 20px 0;
+	margin-top: 30px;
+	border-top: 5px double black;
+}
+
+.ftrLeft{
+	padding-left: 2%;
+}
+
+.ftrRight{
+	padding-right: 2%;
+}
+
+/*Forms Elements*/
+.row{
+	width: 90%;
+	margin: 5px 5%;
+}
+
+label{
+	float: left;
+	font-size: 24px;
+	color: #34495e;
+	width: 125px;
+	margin-right:25px;
+}
+
+.txt{
+	height: 24px;
+	padding: 5px;
+	border: 2px solid #2c3e50 ;
+	outline: none;
+	font-size: 20px;
+	color: #34495e;
+
+}
+.txt:invalid{
+	background-color: rgba(231,76,60,.3);
+	border-color: red;
+}
+.txt:invalid:required{
+	background: white: !important;
+}
+
+.txt: valid:required{
+	border-color: #2ecc71;
+}
+.txt:[Disabled]{
+	background: rgba(0,0,0,.1);
+
+}
+textArea{
+	height: 95px;
+	padding: 5px;
+	border: 2px solid #2c3e50 ;
+	outline: none;
+	font-size: 20px;
+	color: #34495e;
+	resize: none;
+
+}
+textArea2{
+
+}
+
+.btn{
+	width: 100px;
+	height: 50px;
+	padding: 15px;
+	font-size: 24px;
+	border: 2px solid #2c3e50;
+	outline: none;
+	cursor: move;
+
+
+}
+.btn:hover{
+	background: #2c3e50
+	color: black;
+
+}
+
+.btn: active{
+	background: #f1c40f;
+	size: 100px;
+}
+
+.buttonn{
+	width: 1300px;
+	height: 50px;
+	padding: 15px;
+	font-size: 24px;
+	border: 2px solid #2c3e50;
+	outline: none;
+	cursor: pointer;
+	background: white;
+
+
+}
+
+button img{
+	height: 100%;
+	vertical-align: middle;
+}
+.listbox option{ 
+	height: 50px;
+	width: 50px;
+	border-width: 50px;
+}
+.listbox option[selected]{
+	background: #2c3e50
+	color: white;
+
+}
+input[type= checkbox]{
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	padding: 15px;
+	~webkit~transform: scale(2);
+	float: left;
+
+}
+
+input[type= checkbox]: checked{
+	background: url(../images/favicon.ico);
+
+}
+.chklable{
+	display: inline-block;
+	float: left;
+	width: auto;
+	padding-right: 5px
+	margin-left: 30px;
+}
+/*Colors*/
+/*
+	translucent red --> rgba(231,76,60 ,.3)
+	midnight blue --> #2c3e50
+	silver  --> #bdc3c7
+	sunflower --> #f1c40f
+	emerland --> #2ecc71
+	wisteria --> #8e44ad
+	wetasphalt --> #34495e
+*/

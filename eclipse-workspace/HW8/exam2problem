@@ -1,0 +1,9 @@
+import java.util.Scanner;
+
+public class exam2problem{
+    public static void main(String[]args){
+        int min=0, max=0, user=0, count =0;
+
+
+    }
+}

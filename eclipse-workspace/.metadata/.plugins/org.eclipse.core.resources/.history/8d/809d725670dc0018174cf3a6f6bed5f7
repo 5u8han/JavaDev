@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class inCLASS10252018 {
+	public static void main (String args[]) {
+		
+		int m,k,gcd = 0,i;
+		
+		
+		Scanner shit = new Scanner(System.in);
+		System.out.println("Enter k: ");
+		k = shit.nextInt();
+		System.out.println("Enter m: ");
+		m =shit.nextInt();
+		
+		
+		
+		for (i = 1; i<=k & i <m; i++) {
+			
+			if(k%i==0 &m%i==0) {
+				gcd = i;
+			}
+			
+		}
+		
+		System.out.println(gcd);
+
+			
+		}
+}

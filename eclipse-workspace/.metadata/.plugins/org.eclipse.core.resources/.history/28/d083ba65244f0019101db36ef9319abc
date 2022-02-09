@@ -1,0 +1,7 @@
+
+public class BullDog extends dog{
+	public BullDog() {
+		
+	}
+
+}

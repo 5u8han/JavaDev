@@ -1,0 +1,48 @@
+/*
+ *Group project 6
+ *Group Name : OJ
+ *Saturday, March 24 
+ */
+/*
+ * This Java Program uses 1-dimensional array to calculate an employee's salary and commission and
+ * display in tabular form.
+ */
+import java.util.*;
+
+public class Sales {
+	public static void main(String[]args) {
+		int [] salary = { 0 , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+		wages (salary);
+		display(salary);
+		System.exit(0);
+		
+		
+	}
+
+public static void wages(int money[]) {
+	Scanner input= new Scanner(System.in);
+	double sales;
+	double percentage = 0.09;
+	System.out.println("Enter Employee's gross sales: \n-1 When done with data entry. -1 to veiw salaries.");
+	sales = input.nextDouble();
+	while(sales!=-1) {
+		double salary = 200.0 + sales*percentage;
+		System.out.println("Employee commission is : $"+ salary);
+		
+		int x = (int)salary/100;
+		++ money [(x<10?x:10)];
+		System.out.println("Enter Employee's gross sales: \n-1 to quit");
+		sales = input.nextInt();
+	}
+	
+}
+public static void display(int dollars[]) {
+	System.out.println("Enter employees in range : ");
+	for(int percentage = 2;percentage<10; percentage++)
+		System.out.println("\n$"+percentage+"00-$"+percentage+"99 : "+dollars[percentage]);
+	System.out.println("\nOver $1000: "+dollars[10]);
+	
+}
+
+
+}

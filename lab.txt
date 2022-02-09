@@ -1,0 +1,204 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import java.awt.Color;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JCheckBox;
+
+public class lastLab {
+
+	private JFrame frame;
+	private JTextField OrderField;
+	private JTextField BurgerField;
+	private JTextField ChickenField;
+	private JPanel panelOrderMenu;
+	private JPanel panelBurger;
+	private JPanel panelChicken;
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MultiWin1 window = new MultiWin1();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+
+	public MultiWin1() {
+		initialize();
+	}
+
+
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(new CardLayout(0, 0));
+		
+		final JPanel panelOrderMenu = new JPanel();
+		frame.getContentPane().add(panelOrderMenu, "name_1077854818444");
+		panelOrderMenu.setLayout(null);
+		panelOrderMenu.setVisible(true);
+
+		final JPanel panelBurger = new JPanel();
+		frame.getContentPane().add(panelBurger, "name_1086213670841");
+		panelBurger.setLayout(null);
+		panelBurger.setVisible(false);
+		
+		final JPanel panelChicken = new JPanel();
+		frame.getContentPane().add(panelChicken, "name_1136153106105");
+		panelChicken.setLayout(null);
+		panelChicken.setVisible(false);
+		
+		JButton BurgerButton = new JButton("Burger");
+		BurgerButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				panelBurger.setVisible(true);
+				panelOrderMenu.setVisible(false);
+			}
+		});
+		BurgerButton.setForeground(Color.BLUE);
+		BurgerButton.setBackground(Color.WHITE);
+		BurgerButton.setBounds(33, 32, 89, 23);
+		panelOrderMenu.add(BurgerButton);
+		
+		JButton ChickenButton = new JButton("Chicken");
+		ChickenButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				panelChicken.setVisible(true);
+				panelOrderMenu.setVisible(false);
+			}
+		});
+		ChickenButton.setForeground(Color.BLUE);
+		ChickenButton.setBackground(Color.WHITE);
+		ChickenButton.setBounds(33, 85, 89, 23);
+		panelOrderMenu.add(ChickenButton);
+		
+		JButton ClearButton = new JButton("Clear");
+		ClearButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				OrderField.setText("");
+			}
+		});
+		ClearButton.setBounds(120, 200, 89, 23);
+		panelOrderMenu.add(ClearButton);
+		
+		OrderField = new JTextField();
+		OrderField.setBounds(120, 166, 300, 20);
+		panelOrderMenu.add(OrderField);
+		OrderField.setColumns(10);
+		
+		JLabel OrderLabel = new JLabel("Order:");
+		OrderLabel.setBounds(60, 169, 46, 14);
+		panelOrderMenu.add(OrderLabel);
+		
+		
+		JCheckBox chkbxBurgMeal = new JCheckBox("Burger Meal $6.00");
+		chkbxBurgMeal.setBounds(6, 7, 150, 23);
+		panelBurger.add(chkbxBurgMeal);
+		
+		JCheckBox chkbxBFries = new JCheckBox("Fries $1.50");
+		chkbxBFries.setBounds(6, 50, 97, 23);
+		panelBurger.add(chkbxBFries);
+		
+		JCheckBox chkbxBDrink = new JCheckBox("Drink $2.00");
+		chkbxBDrink.setBounds(6, 100, 97, 23);
+		panelBurger.add(chkbxBDrink);
+		
+		BurgerField = new JTextField();
+		BurgerField.setBounds(120, 155, 86, 20);
+		panelBurger.add(BurgerField);
+		BurgerField.setColumns(10);
+		
+		JButton BDoneButton = new JButton("Done");
+		BDoneButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String s = new String();
+				
+				if (chkbxBurgMeal.isSelected()) {
+					s = "Burger Meal $6.00, ";
+				}
+				
+				if (chkbxBFries.isSelected()) {
+					s = s + "Fries $1.50, ";
+				}
+				
+				if (chkbxBDrink.isSelected()) {
+					s = s + "Drink $2.00";
+				}
+				OrderField.setText(s);
+				
+				chkbxBurgMeal.setSelected(false);
+				chkbxBFries.setSelected(false);
+				chkbxBDrink.setSelected(false);
+				
+				panelBurger.setVisible(false);
+				panelOrderMenu.setVisible(true);
+			}
+		});
+		BDoneButton.setBounds(6, 154, 89, 23);
+		panelBurger.add(BDoneButton);
+		
+		
+		JCheckBox chkbxChikMeal = new JCheckBox("Chicken Meal $6.00");
+		chkbxChikMeal.setBounds(6, 7, 150, 23);
+		panelChicken.add(chkbxChikMeal);
+		
+		JCheckBox chkbxCFries = new JCheckBox("Fries $1.50");
+		chkbxCFries.setBounds(6, 50, 97, 23);
+		panelChicken.add(chkbxCFries);
+		
+		JCheckBox chkbxCDrink = new JCheckBox("Drink $2.00");
+		chkbxCDrink.setBounds(6, 100, 97, 23);
+		panelChicken.add(chkbxCDrink);
+		
+		ChickenField = new JTextField();
+		ChickenField.setBounds(120, 155, 86, 20);
+		panelChicken.add(ChickenField);
+		ChickenField.setColumns(10);
+		
+		JButton CDoneButton = new JButton("Done");
+		CDoneButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String s = new String();
+				
+				if (chkbxChikMeal.isSelected()) {
+					s = "Chicken Meal $6.00, ";
+				}
+				
+				if (chkbxCFries.isSelected()) {
+					s = s + "Fries $1.50, ";
+				}
+				
+				if (chkbxCDrink.isSelected()) {
+					s = s + "Drink $2.00";
+				}
+				OrderField.setText(s);
+				
+				chkbxChikMeal.setSelected(false);
+				chkbxCFries.setSelected(false);
+				chkbxCDrink.setSelected(false);
+				
+				panelChicken.setVisible(false);
+				panelOrderMenu.setVisible(true);
+			}
+		});
+		CDoneButton.setBounds(6, 154, 89, 23);
+		panelChicken.add(CDoneButton);
+	}
+}

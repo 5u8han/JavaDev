@@ -1,0 +1,5 @@
+USA 203 Washington
+Albania 132 Tirana
+Afghanistan 111 Kabul
+Barbados 97 Bridgetown
+Bahrain 123 Manama

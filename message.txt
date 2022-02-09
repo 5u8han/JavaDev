@@ -1,0 +1,111 @@
+//Kennedy Hach
+//207-5
+//In-class work
+
+import java.util.Scanner;
+
+public class caloriesCounter
+{
+   public static void main(String[] args)
+   {
+            
+      int sum = 0;
+      int avg = 0;
+      int hghCal = 0;
+      int lowCal = 0;
+      int eqlCal = 0;
+      
+      
+      int[] numArray = new int[5];
+      //int[] numArray = {50,200,400,500,100};
+      
+      String[] stringArray = new String[kbd];
+      //String[] stringArray = {"Juice","BigMac","Candy", "Milk", "Egg"};
+      
+      Scanner kbd = new Scanner(System.in);
+      
+      System.out.println("Enter five different foods: ");
+      
+      for(int i = 0; i < 5; i++)
+      {
+         String foodname = kbd.nextLine();
+         
+         stringArray[i] = foodname;
+      }
+
+
+      System.out.println("Enter the calories for the foods entered: ");
+      
+      for(int i = 0; i < 5; i++)
+      {
+         int caloriesCount = kbd.nextInt();
+         
+         numArray[i] = caloriesCount;
+      }
+for(i....... ; i<5;i++){
+sop("the name of "+ stringarray[i] + " sdfsjdhf" + caloriecount [i]);
+      
+      
+      for(int i = 0; i < 5; i++)
+      {
+      System.out.println(stringArray[i] +" " + numArray[i]);
+      }
+      for(int i = 0; i < 5; i++)
+      {
+         sum = sum + numArray[i];
+      }
+         avg = sum/5;
+      
+      System.out.println("Sum: " + sum);
+      
+      System.out.println("Average: " + avg);
+      
+      for(int i = 0; i < 5; i++)
+      {
+         if(numArray[i] > hghCal)
+         hghCal = numArray[i];
+         System.out.println(" Highest calories: "+ hghCal);
+      }
+      //System.out.println("Highest calories: "+ hghCal);
+      
+      for(int i = 1; i < 5; i++)
+      {
+         int temp = numArray[0];
+         if(lowCal <= temp)
+         lowCal = temp;
+     
+         if(numArray[i] < hghCal)
+         
+         lowCal = numArray[i];
+         
+         System.out.println(" Lowest Calories: " + lowCal);
+      }
+      //System.out.println("Lowest Calories: " + lowCal);
+      
+      System.out.println("Items exceeding average calories: ");
+      
+      for(int i = 0; i < 5; i++)
+      {
+         if(numArray[i] > avg)
+         System.out.println(stringArray[i] + " " + numArray[i]);
+      }
+      
+      System.out.println("Items less than average calories: ");
+      
+      for(int i = 0; i < 5; i++)
+      {
+         if(numArray[i] < avg)
+         System.out.println(stringArray[i] + " " + numArray[i]);
+      }
+      
+      System.out.println("Items equal to the average calories: ");
+      for(int i = 0; i < 5; i++)
+      {
+         if(numArray[i] == avg)
+         System.out.println(stringArray[i] + " " + numArray[i]);
+         else
+         System.out.println("Zero");
+      }
+
+   }
+}

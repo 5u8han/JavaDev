@@ -1,0 +1,10 @@
+
+public class testAnimal {
+
+	public static void main(String[] args) {
+			dog dawg = new dog();
+			cat cawt = new cat();
+		
+	}
+
+}

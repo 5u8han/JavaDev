@@ -1,0 +1,114 @@
+/Users/sub/Library/Java/JavaVirtualMachines/openjdk-15.0.2/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=61711:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/sub/IdeaProjects/SongList/out/production/SongList:/Users/sub/Library/Application Support/JetBrains/IdeaIC2020.3/plugins/Kotlin/kotlinc/lib/kotlin-stdlib.jar:/Users/sub/Library/Application Support/JetBrains/IdeaIC2020.3/plugins/Kotlin/kotlinc/lib/kotlin-reflect.jar:/Users/sub/Library/Application Support/JetBrains/IdeaIC2020.3/plugins/Kotlin/kotlinc/lib/kotlin-test.jar TestSongList
+Test 1: [Passed]
+  add("Lewis Capaldi", "Someone You Loved")
+ Expected return of isEmpty(): false
+ Your isEmpty() returns: false
+
+Test 2: [Passed]
+  add("Lil Nas X", "Old Town Road")
+  add("Ed Sheeran & Justin Bieber", "I Don't Care")
+ Expected return of size(): 3
+ Your size() returns: 3
+
+Test 3: [Passed]
+ Expected return of toString():
+  [Ed Sheeran & Justin Bieber - I Don't Care]
+  [Lil Nas X - Old Town Road]
+  [Lewis Capaldi - Someone You Loved]
+
+ Your toString() returns:
+  [Ed Sheeran & Justin Bieber - I Don't Care]
+  [Lil Nas X - Old Town Road]
+  [Lewis Capaldi - Someone You Loved]
+
+
+Test 4: [Passed]
+  remove("Ava Max", "Sweet But Psycho")
+ Expected: false
+ Yours: false
+
+Test 5: [Failed]
+  add("Ava Max", "Sweet But Psycho")
+  add("Billie Eilish", "Bad Guy")
+  add("Mabel", "Don't Call Me Up")
+  add("Lewis Capaldi", "Hold Me While You Wait")
+ Expected return of size(): 7
+ Your size() returns: 4
+
+  [Billie Eilish - Bad Guy]
+  [Ed Sheeran & Justin Bieber - I Don't Care]
+  [Lil Nas X - Old Town Road]
+  [Ava Max - Sweet But Psycho]
+  [Lewis Capaldi - Someone You Loved]
+
+Test 6: [Passed]
+  remove("Billie Eilish", "Bad Guy")
+ Expected: true
+ Yours: true
+
+Test 7: [Passed]
+  remove("Ava Max", "Sweet But Psycho")
+ Expected: true
+ Yours: true
+
+Test 8: [Failed]
+  add("Billie Eilish", "Bury A Friend")
+  add("Lewis Capaldi", "Grace")
+ Expected return of toString():
+  [Billie Eilish - Bury A Friend]
+  [Mabel - Don't Call Me Up]
+  [Lewis Capaldi - Grace]
+  [Lewis Capaldi - Hold Me While You Wait]
+  [Ed Sheeran & Justin Bieber - I Don't Care]
+  [Lil Nas X - Old Town Road]
+  [Lewis Capaldi - Someone You Loved]
+
+ Your toString() returns:
+  [Billie Eilish - Bury A Friend]
+  [Ed Sheeran & Justin Bieber - I Don't Care]
+  [Lil Nas X - Old Town Road]
+  [Lewis Capaldi - Someone You Loved]
+
+
+Test 9: [Failed]
+  remove("Mabel", "Don't Call Me Up")
+ Expected: true
+ Yours: false
+
+Test 10: [Failed]
+ Expected return of size(): 6
+ Your size() returns: 3
+
+Test 11: [Failed]
+  mylist.buildList("Lewis Capaldi")
+ Expected return of toString() on the new list:
+  [Lewis Capaldi - Grace]
+  [Lewis Capaldi - Hold Me While You Wait]
+  [Lewis Capaldi - Someone You Loved]
+
+ Your toString() returns:
+  [Lewis Capaldi - Someone You Loved]
+
+
+Test 12: [Passed]
+  mylist.buildList("Lil Nas X")
+ Expected return of toString() on the new list:
+  [Lil Nas X - Old Town Road]
+
+ Your toString() returns:
+  [Lil Nas X - Old Town Road]
+
+
+Test 13: [Passed]
+  mylist.buildList("Ava Max")
+ Expected return of toString() on the new list:
+  An empty list
+
+ Your toString() returns:
+  An empty list
+
+Total test cases: 13
+Correct: 8
+Wrong: 5
+
+Process finished with exit code 0
