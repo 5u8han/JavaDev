@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class OutputSeperateLine {
 
 	public static void main(String[] args) {
-		Scanner something=new Scanner(System.in);
-		System.out.println("enter a 4 digit number: ");
+		Scanner something = new Scanner(System.in);
+		System.out.println("enter a 4 digit number: "); 
 		
 		int number = something.nextInt();
 		
