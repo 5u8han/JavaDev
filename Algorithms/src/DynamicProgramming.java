@@ -6,7 +6,7 @@ public class DynamicProgramming {
         Scanner input = new Scanner(System.in);
         System.out.println("enter a value?: ");
 
-        int n = 0, recCount=0;
+        int n = 0, recCount = 0;
 
         while (n != -1) {
             n = input.nextInt();
@@ -15,8 +15,7 @@ public class DynamicProgramming {
             System.out.println("the " + n + "th term of fibonacci is: " + Fib);
         }
     }
-
-    static long fib(int n){
+    public static long fib(int n){
   //  recCount++;
 
     //int [] memo =
