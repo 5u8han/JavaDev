@@ -1,41 +1,33 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class HowManyEnteredBeforeBothSeen {
+
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        System.out.println("welcome\n This program checks to see when 2 integers were entered  ");
+
+        Scanner input = new Scanner(System.in);
         boolean aFound = false;
         boolean bFound = false;
         boolean foundBoth = false;
-        int a=0, b=0,count=0;
-        ArrayList <Integer> enteryList = new ArrayList();
-        a=in.nextInt();
-        b=in.nextInt();
+        int a, b, count = 0;
+        ArrayList<Integer> list = new ArrayList();
+        System.out.println("Enter value a: ");
+        a = input.nextInt();
+        System.out.println("Enter value b: ");
 
-        while(foundBoth !=true){
-            int i=0;
-            enteryList.add(in.nextInt());
-            if(enteryList.get(i) ==a){
+        b = input.nextInt();
+
+        System.out.println("Now keep entering numbers until program succeeds: ");
+        while (aFound != true && bFound != true) {
+            list.add(input.nextInt());
+            System.out.println("Next: ");
+            if (list.contains(a) && list.contains(b)) {
                 aFound = true;
-                count++;
-                i++;
-            }
-            if(enteryList.get(i) == b){
-                bFound =true;
-                count++;
-                i++;
-            }
-            count++;
-            i++;
-
-            if(aFound && bFound){
-                foundBoth =true;
+                bFound = true;
 
             }
+
+            System.out.println("You had to enter " + list.size() + " values before both " + a + " and " + b + " were seen.");
         }
     }
 }
-
-
-
-

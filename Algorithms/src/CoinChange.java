@@ -2,8 +2,12 @@ import java.util.Scanner;
 
 public class CoinChange {
     public static void main(String[] args) {
+        System.out.println("welcome\n This program converts pennies into larger change ");
+
         int Change,RemainingChange, Quarter, Nickle, Dime, Penny;
         Scanner input = new Scanner(System.in);
+
+        System.out.println("Please input a change amount in pennies: ");
         Change = input.nextInt();
 
         if (Change < 5){
@@ -24,7 +28,7 @@ public class CoinChange {
 
         if(Dime ==1){
             System.out.println(Dime + " dime");
-        }else if (Dime >1){System.out.println(Dime + " dimes");}
+        } else if (Dime >1){System.out.println(Dime + " dimes");}
 
         if(Nickle ==1){
             System.out.println(Nickle + " nickle");
@@ -32,7 +36,7 @@ public class CoinChange {
 
         if(Penny ==1){
             System.out.println(Penny + " penny");
-        }else if (Penny >1){System.out.println(Penny + " pennies");}
+        } else if (Penny >1){System.out.println(Penny + " pennies");}
 
     }
 }

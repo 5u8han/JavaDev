@@ -3,6 +3,7 @@ import java.util.Scanner;
 class BinarySearchGuessingGame {
     //print numbers guessed before finding the secret value. BST style searching.
     public static void main(String[] args) {
+        System.out.println("welcome\n This program prints the values before it finds the key between high and low using binary search methods");
         Scanner in = new Scanner(System.in);
         int low, high, secretValue, temp;
 

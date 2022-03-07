@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class BinarySearchNumberofGuesses {
     public static void main(String[] args) {
+        System.out.println("welcome\n This program prints the number of guesses before it finds the key between high and low using binary search methods");
+
         int low,high;
         Scanner input = new Scanner(System.in);
         System.out.print("enter Low: ");
@@ -23,24 +25,15 @@ public class BinarySearchNumberofGuesses {
             low = high;
             high = temp;
         }
-
-
-        int range = (high - low) +1;
-
-        if (range == 1 || range ==2 ){
+        int range = (high - low)+1;
+        if (range == 1 || range ==2){
             return 1;
         }
         if (range ==3){
             return 2;
         }
+        return 1+ (int)  Math.floor((Math.log(range)/Math.log(2)));
 
-        System.out.println("range  "+range);
-        System.out.println("number of guesses: ");
-        if((Math.log(range)/Math.log(2))%1 ==0){
-            return (int) Math.ceil(Math.log(range)/Math.log(2));
-        }
-        else
-        return 1+ (int)Math.floor((Math.log(range)/Math.log(2)));
 
     }
 }
